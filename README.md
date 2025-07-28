@@ -1,65 +1,89 @@
-# SealAIEngineerTest
+# SmartHR - Sistem Manajemen Pegawai Berbasis AI
 
-SmartHR - Sistem Manajemen Pegawai Berbasis AI
-📌 Deskripsi Proyek
-SmartHR adalah sistem manajemen sumber daya manusia berbasis AI yang dirancang untuk membantu organisasi pemerintah atau perusahaan dalam mengelola data pegawai secara efisien. Sistem ini menggabungkan teknologi database SQL, vector embedding, dan Retrieval-Augmented Generation (RAG) untuk menyediakan solusi pencarian dan analisis data pegawai yang cerdas.
+## 📌 Deskripsi Proyek
+**SmartHR** adalah sistem manajemen sumber daya manusia berbasis AI yang dirancang untuk membantu organisasi pemerintah atau perusahaan dalam mengelola data pegawai secara efisien. Sistem ini menggabungkan teknologi **SQL database**, **vector embedding**, dan **Retrieval-Augmented Generation (RAG)** untuk menyediakan solusi pencarian dan analisis data pegawai yang cerdas.
 
-✨ Fitur Utama
-Manajemen Database Pegawai: Penyimpanan terstruktur data pegawai dengan SQLite
+## ✨ Fitur Utama
+- **Manajemen Database Pegawai**  
+  Penyimpanan terstruktur data pegawai menggunakan **SQLite**
+  
+- **Pencarian Semantik**  
+  Pencarian cerdas berbasis embedding dan **vector database** (ChromaDB)
 
-Pencarian Semantik: Kemampuan pencarian cerdas menggunakan teknologi embedding dan vector database
+- **Analisis Kebutuhan Pelatihan**  
+  Rekomendasi pelatihan berdasarkan profil pegawai
+  
+- **Antarmuka Interaktif**  
+  Dashboard visual dan user-friendly dengan **Streamlit**
 
-Analisis Kebutuhan Pelatihan: Rekomendasi pelatihan berbasis profil pegawai
+- **Optimasi Prompt**  
+  Tiga tingkat kecerdasan dalam menjawab pertanyaan HR melalui LLM
 
-Antarmuka Interaktif: Dashboard Streamlit yang user-friendly
+## 🛠️ Teknologi yang Digunakan
+- **Bahasa Pemrograman**: Python  
+- **Database**: SQLite, ChromaDB  
+- **Embedding Model**: Sentence Transformers, Google Generative AI  
+- **LLM**: Gemini 2.5 Pro  
+- **Framework**: LangChain, Streamlit  
+- **Infrastruktur Demo**: Ngrok  
 
-Optimasi Prompt: Tiga level kecerdasan dalam menjawab pertanyaan HR
+## 🚀 Cara Menjalankan
 
-🛠️ Teknologi yang Digunakan
-Bahasa Pemrograman: Python
+### Persyaratan
+- Python 3.8+
 
-Database: SQLite, ChromaDB
+### Instalasi
 
-Embedding Model: Sentence Transformer, Google Generative AI
+1. **Clone repositori**
+    ```bash
+    git clone https://github.com/username/SmartHR.git
+    cd SmartHR
+    ```
 
-LLM: Gemini 2.5 Pro
+2. **(Opsional) Buat virtual environment**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate      # Linux/Mac
+    venv\Scripts\activate         # Windows
+    ```
 
-Framework: LangChain, Streamlit
+3. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Infrastruktur: Ngrok (untuk demo)
+### Menjalankan Aplikasi
 
-🚀 Cara Menjalankan
-Persyaratan
-Python 3.8+
+- **Versi CLI**
+    ```bash
+    python main.py
+    ```
 
-Library yang diperlukan (lihat requirements.txt)
+- **Versi Streamlit**
+    ```bash
+    streamlit run app.py
+    ```
 
-Instalasi
-Clone repositori ini
+- **Akses via Ngrok**
+    > Setelah Streamlit berjalan:
+    ```bash
+    ngrok http 8501
+    ```
 
-bash
-git clone https://github.com/username/SmartHR.git
-cd SmartHR
-Buat virtual environment (opsional)
+## 📝 Contoh Penggunaan
 
-bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate  # Windows
-Install dependencies
+### 🔍 Pencarian Pegawai
+- `"Tampilkan semua pegawai di BPS dengan pengalaman >5 tahun"`
+- `"Siapa yang memiliki spesialisasi Data Science?"`
 
-bash
-pip install -r requirements.txt
-Menjalankan Aplikasi
-Untuk versi CLI:
+### 📊 Analisis Kebutuhan
+- `"Analisis kebutuhan pelatihan AI untuk pegawai"`
+- `"Rekomendasi pelatihan untuk staf Diskominfo"`
 
-bash
-python main.py
-Untuk versi Streamlit:
+### 🧾 Manajemen Data
+- Filter pegawai berdasarkan **unit kerja**, **pendidikan**, atau **pengalaman**
+- Ekspor data ke **CSV**
 
-bash
-streamlit run app.py
-Untuk mengakses via ngrok (setelah Streamlit berjalan):
+---
 
-bash
-ngrok http 8501
+> Dibuat untuk keperluan seleksi AI Engineer Test - #SealAIEngineerTest 🚀
